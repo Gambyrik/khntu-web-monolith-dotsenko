@@ -73,3 +73,18 @@ cp .env.example .env
 npm run dev
 # GET http://localhost:3000/api/v1/health
 ```
+
+## REST API (ЛР2, Milestone 1 — мок-дані у пам'яті)
+
+| Метод | Маршрут | Опис |
+|---|---|---|
+| GET | /api/v1/health | Стан сервера |
+| GET | /api/v1/vehicles[?status=AVAILABLE] | Список авто (фільтр за статусом) |
+| GET | /api/v1/vehicles/:id | Авто за id (404, якщо нема) |
+| POST | /api/v1/vehicles | Додати авто (400 — помилка валідації, 409 — дублікат номера) |
+| DELETE | /api/v1/vehicles/:id | Видалити авто (400, якщо воно в оренді) |
+| GET | /api/v1/options | Список додаткових опцій |
+| GET | /api/v1/options/:id | Опція за id |
+| POST | /api/v1/options | Додати опцію |
+
+Колекція Postman: `postman_collection_milestone1.json`.
